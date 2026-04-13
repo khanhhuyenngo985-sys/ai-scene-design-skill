@@ -698,88 +698,67 @@ minimalist, solid background, rim lighting
 
 ---
 
-## 光影公式：场景情绪的核心参数
+## 场景光影系统
 
-> 来源：白梦客知识库 `wiki/美学配方/通用线/光影公式.md`
-> 核心配方：侧逆光+烟雾（70%）× 霓虹漫射（30%）
-> 整体美学融合：胡金铨 × 王家卫
+> 光影是场景情绪的底层操作系统。以下是通用的光影类型和组合方式，
+> 可根据世界观需要自由搭配，不限于任何特定美学流派。
 
-### 核心参数速查
+### 五种基础光影类型
 
-```
-侧逆光 45°~60° + 烟雾 30%~50% + 光比 2:1~4:1 + 负空间 50%~70%
-```
+| 光影类型 | 原理 | 情绪效果 | AI 提示词 |
+|---------|------|---------|----------|
+| **侧逆光** | 光从主体侧后方射入，勾勒轮廓 | 戏剧感、神秘、诗意 | `side-backlighting, rim light, dramatic silhouette` |
+| **顶光** | 光从正上方直射 | 审判感、压迫、神圣 | `overhead lighting, top-down light, harsh shadows under eyes` |
+| **自然散射光** | 阴天/漫射，无明显方向 | 日常、真实、柔和 | `overcast natural light, soft diffused, no harsh shadows` |
+| **单一人造光源** | 一盏灯/一支蜡烛/一个屏幕 | 孤独、聚焦、亲密 | `single light source, pool of light in darkness` |
+| **霓虹/人工色光** | 多色人造光源，漫射混合 | 都市、暧昧、赛博 | `neon glow, colored artificial light, diffused neon` |
 
-### 侧逆光 + 烟雾（70%，胡金铨武侠禅意）
+### 光影参数速查
 
-| 参数 | 数值 |
-|------|------|
-| 光源位置 | 侧后方 45°~90° |
-| 光源高度 | 高于主体 15°~45° |
-| 光比 | 2:1~4:1（标准） / 4:1~8:1（高对比戏剧感） |
-| 烟雾浓度 | 薄雾 5%~10% / 中雾 10%~20% / 浓雾 20%~40% |
+| 参数 | 数值范围 | 说明 |
+|------|---------|------|
+| 光源角度 | 0°~180° | 0°=正面；90°=侧面；180°=完全逆光 |
+| 光源高度 | 0°~90° | 0°=水平；45°=标准；90°=顶光 |
+| 光比 | 1:1~8:1 | 越高越戏剧，越低越柔和 |
+| 色温 | 2000K~8000K | 低=暖黄；高=冷蓝 |
 
-**场景方案示例：**
+### 介质效果（烟雾/雨/尘）
 
-| 场景 | 光源位置 | 烟雾浓度 | 效果 |
-|------|---------|---------|------|
-| 竹林 | 侧后方 45° | 薄雾 | 禅意、光束穿透 |
-| 旧客栈 | 侧后方 90° | 中雾 | 尘埃光束、复古 |
-| 山崖 | 侧后方 45° | 薄雾 | 壮阔、孤独 |
-| 旧仓库 | 破损窗口（高对比） | 尘埃 | 神秘、noir |
-| 室内窗 | 侧后方 | 薄雾 | 阳光穿透、时光感 |
-| 废弃剧场 | 穹顶破洞月光 | 中雾 | 孤独、神圣 |
+光需要**介质**才能被看到。介质决定了光的质感：
 
-**AI 提示词模板：**
-```
-side-backlighting, light from behind subject,
-smoke scattering, volumetric light, god rays,
-dust particles in light beam,
-high contrast, dramatic shadows,
-cinematic lighting, film noir influence,
-mysterious atmosphere, zen aesthetic
-```
+| 介质 | 视觉效果 | 情绪 | AI 提示词 |
+|------|---------|------|----------|
+| 薄雾 5%~10% | 隐约可见的光束 | 诗意、仙境、清晨 | `light mist, subtle fog, gentle atmosphere` |
+| 中雾 10%~20% | 明显的体积光/丁达尔 | 神秘、怀旧、仪式 | `volumetric light, god rays, visible light beams` |
+| 浓雾 20%~40% | 能见度低，轮廓模糊 | 恐惧、迷失、末日 | `heavy fog, low visibility, obscured, eerie mist` |
+| 雨 | 光被打散/地面反射 | 浪漫、悲伤、净化 | `rain, wet surface reflections, scattered light` |
+| 尘埃 | 光束中的粒子 | 废弃、时间感、荒凉 | `dust particles in light beam, abandoned atmosphere` |
+| 雪 | 反射增强，画面提亮 | 纯洁、死寂、冷酷 | `snow reflecting light, bright cold atmosphere` |
 
-### 霓虹漫射（30%，王家卫城市感）
+### 霓虹/人工色光
 
-| 霓虹类型 | 色温 | 适用场景 |
+| 色光类型 | 色温 | 适用场景 |
 |---------|------|---------|
-| 暖霓虹 | 2800K~3000K | 餐厅、酒吧、怀旧 |
-| 冷霓虹 | 4000K~5000K | 办公、科技、都市疏离 |
-| 粉霓虹 | — | 爱情、夜晚、浪漫 |
-| 绿霓虹 | — | 赛博、神秘 |
+| 暖黄/琥珀 | 2800K~3000K | 餐厅、酒吧、怀旧、温馨 |
+| 冷白/蓝 | 4000K~6500K | 办公、医院、都市疏离 |
+| 粉红/品红 | — | 爱情、夜晚、暧昧 |
+| 绿/青 | — | 赛博朋克、神秘、诡异 |
+| 混合多色 | — | 夜市、游乐场、迷幻 |
 
-**AI 提示词模板：**
-```
-neon light, diffused neon glow, soft edge lighting,
-city night, neon reflections on wet pavement,
-Wong Kar-wai aesthetic, cinematic neon,
-color bleeding, soft shadows
-```
+### 光影组合示例（按场景选择）
 
-### 混合光公式
-
-**侧逆光 + 霓虹（城市夜景）：**
-```
-A figure in neon-lit alley, side-backlighting from street lamp,
-smoke in the air, neon glow on face,
-high contrast, cinematic, urban night,
-Wong Kar-wai style, dramatic shadows
-```
-
-**自然光 + 烟雾（室内日光感）：**
-```
-Sunlight through dusty window, volumetric light,
-smoke in light beams, side-backlit,
-warm interior, contemplative mood,
-cinematic, film grain, nostalgic atmosphere
-```
+| 世界观场景 | 光影组合 | AI 提示词模板 |
+|---------|---------|-------------|
+| 古代竹林 | 侧逆光 + 薄雾 | `side-backlighting through bamboo, light mist, volumetric` |
+| 废弃仓库 | 单一窗光 + 尘埃 | `single shaft of light through broken window, dust particles` |
+| 赛博朋克街道 | 霓虹多色 + 雨面反射 | `neon-lit street, rain reflections, colorful light bleeding` |
+| 雪山神殿 | 顶光 + 雪反射 | `overhead light, snow reflecting, cold sacred atmosphere` |
+| 日常咖啡馆 | 侧窗自然光 + 散射 | `window light, warm interior, soft natural, contemplative` |
+| 地下通道 | 荧光灯 + 潮湿反光 | `fluorescent light, wet floor reflections, underground` |
 
 ---
 
 ## 七情与场景视觉参数速查
-
-> 来源：白梦客知识库 `wiki/创作方法论/导演/情绪引导方法论.md`
 
 **核心原则：情绪不是被"说"出来的，是被"引导"出来的。场景视觉语言直接在观众心里构建情绪。**
 
@@ -807,8 +786,6 @@ cinematic, film grain, nostalgic atmosphere
 ---
 
 ## 分镜结构：场景如何服务于叙事节奏
-
-> 来源：白梦客知识库 `wiki/AI视频创作/Vidu/分镜生成系统.md` + `wiki/AI视频创作/Seedance/分镜模板.md`（Seedance = 即梦）
 
 ### 1+3 叙事矩阵（非对话场景）
 
@@ -861,29 +838,23 @@ cinematic, film grain, nostalgic atmosphere
 
 ---
 
-## 导演风格 × 场景美学速查
+## 世界观类型 × 场景视觉参考
 
-> 来源：白梦客知识库 `wiki/创作方法论/导演/情绪引导方法论.md`
+> 以下是常见世界观类型的视觉倾向，作为起点而非限制。
+> 你完全可以混搭——比如用「末日废土的材质」+「仙侠的光影」创造全新世界。
 
-| 导演风格 | 场景构图核心 | 光影参数 | AI 风格词 |
-|---------|-----------|---------|----------|
-| **胡金铨** | 前景遮挡 30% + 深景深背景 | 侧逆光 45°~60°，烟雾 30%~50% | `King Hu aesthetic, bamboo, volumetric light` |
-| **王家卫** | 残缺构图，只拍局部 | 大面积黑暗 + 小块霓虹光 | `Wong Kar-wai style, neon glow, fragmented` |
-| **北野武** | 宽阔比例，人物占比小 | 自然光，阴天柔光，高对比 | `Beat Takeshi style, vast empty space` |
-| **李安** | 情绪物件点缀 | 自然侧逆光，叙事结合 | `Ang Lee style, emotional detail, soft natural light` |
-| **塔可夫斯基** | 长镜头静水面，时间感 | 慢移动光源 + 薄雾 | `Tarkovsky aesthetic, slow burn, water surface` |
-
----
-
-## 类型片场景视觉参考
-
-| 类型 | 场景特征 | 光影推荐 | 色调 |
-|------|---------|---------|------|
-| 古装/武侠 | 服装考究、场景宏大（竹林/客栈/山崖） | 侧逆光 + 薄雾 | 大地色 + 琥珀 |
-| 现代都市 | 场景真实、霓虹街头、咖啡馆 | 霓虹漫射 + 雨面反光 | 苍青 + 暖霓虹 |
-| 科幻赛博 | 场景前卫、金属感、冷峻 | 单一强光 + 粒子 | 冷蓝 + 霓虹绿 |
-| 奇幻异世界 | 场景梦幻、自然奇景 | 自然光过曝 + 体积光 | 饱和高对比 |
-| 末日废土 | 荒废建筑、破烂质感 | 高对比顶光 + 浓雾 | 大地灰 + 消色 |
+| 世界观类型 | 空间特征 | 光影倾向 | 色调 | 材质关键词 |
+|---------|---------|---------|------|----------|
+| 古代东方 | 院落/山水/客栈 | 侧逆光 + 薄雾 | 大地色 + 琥珀 | 木、石、纸、竹 |
+| 中世纪西方 | 城堡/教堂/村落 | 烛光/缝隙光 | 暗金 + 深褐 | 石材、铸铁、粗布 |
+| 现代都市 | 公寓/街头/咖啡馆 | 自然光/霓虹混合 | 苍青 + 暖霓虹 | 混凝土、玻璃、钢 |
+| 赛博朋克 | 巨构/暗巷/底层市场 | 霓虹多色 + 雨面反射 | 冷蓝 + 霓虹绿粉 | 金属、全息、霓虹管 |
+| 仙侠/奇幻 | 浮空宫殿/灵池/密林 | 体积光 + 自然过曝 | 高饱和 + 灵光 | 玉石、水晶、发光纹路 |
+| 末日废土 | 废墟/锈蚀/荒原 | 高对比顶光 + 浓雾 | 大地灰 + 消色 | 锈蚀金属、碎混凝土 |
+| 太空科幻 | 飞船/空间站/星球表面 | 单一强光 + 无大气散射 | 冷白 + 深黑 | 金属舱壁、全息屏 |
+| 蒸汽朋克 | 齿轮工厂/飞艇/维多利亚城 | 暖色人造光 + 蒸汽 | 铜色 + 暗绿 | 黄铜、皮革、蒸汽管 |
+| 日常生活 | 家庭/学校/便利店 | 柔和自然光/荧光灯 | 中性偏暖 | 日常材质混合 |
+| **你的世界** | **自定义** | **自由组合** | **自定义** | **自定义** |
 
 ---
 
@@ -891,11 +862,11 @@ cinematic, film grain, nostalgic atmosphere
 
 ```mermaid
 graph TD
-    A[确定故事世界观] --> B[列出核心场景清单]
-    B --> C[为每个场景写200字场景描述]
-    C --> D[确定场景情绪功能\n对应七情参数]
-    D --> E[套用光影公式\n侧逆光/霓虹/混合]
-    E --> F[套用构图法则\n前景遮挡/留白比例]
+    A[确定世界观基调] --> B[列出核心场景清单]
+    B --> C[为每个场景写场景描述\n空间类型+材质+光影+情绪]
+    C --> D[确定场景情绪功能]
+    D --> E[选择光影类型组合]
+    E --> F[设计构图层次\n前景/中景/背景]
     F --> G[生成场景板文生图描述词]
     G --> H[出图验证场景氛围]
     H --> I{氛围正确？}
@@ -922,7 +893,7 @@ empty stage with heavy red curtains in the wind,
 side-backlighting from moonlight above, misty atmosphere,
 volumetric light beams, dramatic shadows,
 melancholic and sacred mood, cinematic,
-King Hu aesthetic, 2.35:1 aspect ratio |
+2.35:1 aspect ratio |
 ```
 
 ---
@@ -931,11 +902,12 @@ King Hu aesthetic, 2.35:1 aspect ratio |
 
 | 决策 | 推荐做法 |
 |------|---------|
-| 场景需要传达什么情绪？ | 先定七情，再选光影/构图参数 |
-| 光影选哪种？ | 70% 侧逆光+烟雾；城市夜景加 30% 霓虹漫射 |
-| 构图层次怎么建立？ | 前景遮挡（胡金铨）+ 极简留白（北野武）+ 情绪细节（李安）|
-| 场景描述给 AI 多少字？ | 文生图描述词 150 字以上，含：光影/色调/风格/情感关键词 |
+| 场景需要传达什么情绪？ | 先定情绪方向，再选光影/构图参数 |
+| 光影选哪种？ | 从五种基础光影类型中选择，按世界观自由组合 |
+| 构图层次怎么建立？ | 前景遮挡 + 极简留白 + 情绪细节点缀，比例自由 |
+| 场景描述给 AI 多少字？ | 文生图描述词 150 字以上，含：空间/材质/光影/色调/情感 |
 | 场景在分镜中如何引用？ | 用 `@场景名` 标签，禁止代词，保持原子化 |
 | 如何防止场景 AI 输出随机性？ | 先出场景板设定图，锁定后作为参考图输入 |
 | 场景只要一张正面图吗？ | 不够，需四镜（标准/情感/动态/氛围）覆盖不同叙事需求 |
 | 场景和角色如何配合？ | 场景色彩应与角色色块形成对比/互补，避免视觉相融 |
+| 世界观是全新的怎么办？ | 从建筑风格表和材质表中自由组合，混搭创造新世界 |
