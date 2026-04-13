@@ -756,7 +756,7 @@ cinematic, film grain, nostalgic atmosphere
 
 ## 分镜结构：场景如何服务于叙事节奏
 
-> 来源：白梦客知识库 `wiki/AI视频创作/Vidu/分镜生成系统.md` + `wiki/AI视频创作/Seedance/分镜模板.md`
+> 来源：白梦客知识库 `wiki/AI视频创作/Vidu/分镜生成系统.md` + `wiki/AI视频创作/Seedance/分镜模板.md`（Seedance = 即梦）
 
 ### 1+3 叙事矩阵（非对话场景）
 
