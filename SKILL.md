@@ -664,28 +664,31 @@ minimalist, solid background, rim lighting
 | 光影锚点 | 一束光指向情绪焦点 | 一束侧光打在遗留的照片上 |
 | 缺席暗示 | 用物件暗示不在场的人 | 桌上多出的一杯咖啡、空荡的秋千 |
 
-### 构图风格融合参考
+### 空间风格融合参考（建筑大师语言）
 
-> 以下是不同导演/风格的构图倾向，作为融合创作的**参考素材**，
-> 实际应用中应自由组合，不必拘泥于单一风格。
+> 场景构建本质是**搭建一个新的世界**。以下是几位极具辨识度的建筑大师的空间处理手法，
+> 将他们的设计语言作为 Prompt 素材，能够快速奠定高级的空间质感。你可以将古典的材质与参数化的形态自由混搭。
 
-| 风格来源 | 构图偏好 | 可提取的技法 |
-|---------|---------|-----------|
-| 胡金铨 | 前景遮挡 30% + 深景深 + 禅意留白 | 竹林/门框的遮挡层次 |
-| 北野武 | 宽阔比例、人物极小、大面积天空/海 | 极端负空间的孤独感 |
-| 李安 | 细节物件传情、克制的中景 | 用一个物件讲整部戏的情感 |
-| 王家卫 | 残缺构图，只拍局部、倾斜角度 | 碎片式框取、不完整即美 |
-| 韦斯·安德森 | 极致对称、粉彩色块、正面平视 | 强迫症级对称的仪式感 |
-| 塔可夫斯基 | 缓慢横移、水面反射、自然长镜头 | 诗意时间感、水作为镜面 |
-| 今敏 | 虚实交错、空间折叠、match cut | 梦境与现实的无缝切换 |
-| 是枝裕和 | 窗光侧照、家庭空间、低机位 | 日常生活的诗意距离 |
-| 大卫·芬奇 | 精密对称+冷调、顶光、压迫感 | 强迫症空间的不安 |
-| 宫崎骏 | 层叠丰富的背景、动态前景、飞翔视角 | 手绘感的深度层次 |
+| 建筑/空间流派 | 空间与光影偏好 | AI 风格词 / 提示词 |
+|-------------|--------------|------------------|
+| **安藤忠雄** (Tadao Ando) | 清水混凝土、极简几何、光的缝隙/十字截面、禅意 | `Tadao Ando style, exposed concrete, geometric light slit, zen minimalism` |
+| **扎哈·哈迪德** (Zaha Hadid) | 参数化曲面、流线型、反重力、未来感有机体 | `Zaha Hadid aesthetic, parametric curves, fluid futuristic architecture` |
+| **路易斯·康** (Louis Kahn) | 纪念碑般的厚重体块、砖石与混凝土的强光影对比 | `Louis Kahn, monumental geometry, brutalist brick and concrete, stark shadow` |
+| **路易斯·巴拉甘** (Luis Barragán) | 高饱和度单色墙面（粉/黄）、水池倒影、光影几何 | `Luis Barragan style, vibrant colored walls, geometric water reflection, emotive` |
+| **密斯·凡·德罗** (Mies van der Rohe)| "少即是多"、钢与玻璃的极尽克制、悬浮平顶 | `Mies van der Rohe, minimalist glass pavilion, steel structure, open plan` |
+| **安东尼·高迪** (Antoni Gaudí) | 自然有机形态、彩色碎瓷拼贴、仿生学框架 | `Gaudi style, organic architecture, mosaic tile, biomorphic structure` |
+| **圣地亚哥·卡拉特拉瓦** (Calatrava) | 纯白骨骼结构、飞翼/肋骨意象、轻盈张力 | `Santiago Calatrava, skeletal structure, organic white architecture, kinetic` |
+| **里卡多·波菲** (Ricardo Bofill) | 迷宫般的巨大几何体、超现实主义古典、粉红色块 | `Ricardo Bofill, surrealist geometric labyrinth, monumental pink blocks` |
+| **彼得·卒姆托** (Peter Zumthor) | 极致材质触感、幽暗中的微光、感官空间 | `Peter Zumthor, tactile material, sensory atmosphere, light in darkness` |
+| **高松伸** (Shin Takamatsu) | 机械与建筑融合、重金属外壳、赛博黑帮基地感 | `Shin Takamatsu, mechanical architecture, heavy metal facade, dystopian` |
 
-**融合示例**：
+**空间融合示例（创造新世界）**：
 ```
-胡金铨的前景遮挡 + 王家卫的碎片化框取 + 赛博朋克的霓虹色彩
-= 雨夜霓虹巷道中，透过铁栏杆的缝隙看到角色的局部剪影
+扎哈的流线型空间 + 波菲的超现实粉色 + 末日废土的斑驳质感
+= 粉色斑驳的流线型地下遗迹走廊
+
+安藤的清水混凝土十字光缝 + 赛博朋克霓虹 + 水面反射
+= 赛博神庙：在幽暗的混凝土水池中，十字形缝隙透出刺眼的霓虹光
 ```
 
 ### 构图应用原则
